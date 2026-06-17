@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kebijakan Privasi — MathSharp</title>
+<meta name="description" content="MathSharp tidak mengumpulkan data apa pun. Tanpa izin, tanpa internet, tanpa iklan. Semua data lokal di perangkat." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg:#0E1117; --surface:#161B26; --surface-2:#1F2630; --primary:#4C8DFF;
+    --secondary:#2DD4BF; --accent:#F59E0B; --text:#E6EAF2; --muted:#9AA4B2;
+    --outline:#2A323D; --success:#34D399; --shadow:rgba(0,0,0,.45);
+    --font-display:'Space Grotesk',system-ui,sans-serif;
+    --font-body:'Plus Jakarta Sans',system-ui,sans-serif;
+  }
+  html[data-theme="light"] {
+    --bg:#F6F8FB; --surface:#FFFFFF; --surface-2:#EDF1F7; --primary:#2563EB;
+    --secondary:#0D9488; --accent:#D97706; --text:#111827; --muted:#4B5563;
+    --outline:#D1D9E6; --success:#059669; --shadow:rgba(20,40,80,.10);
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body {
+    font-family:var(--font-body); background:var(--bg); color:var(--text);
+    line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+    transition:background .4s ease, color .4s ease;
+  }
+  /* latar operator matematika melayang */
+  .bg-ops { position:fixed; inset:0; z-index:0; overflow:hidden; pointer-events:none; }
+  .bg-ops span {
+    position:absolute; font-family:var(--font-display); font-weight:700;
+    color:var(--primary); opacity:.05; user-select:none;
+    animation:drift linear infinite;
+  }
+  @keyframes drift {
+    0%   { transform:translateY(0) rotate(0deg); }
+    100% { transform:translateY(-140px) rotate(20deg); }
+  }
+  .glow {
+    position:fixed; top:-180px; left:50%; transform:translateX(-50%);
+    width:680px; height:480px; z-index:0; pointer-events:none; filter:blur(90px);
+    background:radial-gradient(circle, rgba(76,141,255,.30), transparent 65%);
+  }
+  .wrap { position:relative; z-index:1; max-width:760px; margin:0 auto; padding:0 22px 80px; }
+
+  /* top bar */
+  header {
+    position:sticky; top:0; z-index:10; display:flex; align-items:center;
+    justify-content:space-between; padding:14px 22px;
+    background:color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter:blur(12px); border-bottom:1px solid var(--outline);
+  }
+  .brand { display:flex; align-items:center; gap:10px; font-family:var(--font-display);
+           font-weight:700; font-size:18px; letter-spacing:-.2px; }
+  .brand svg { width:34px; height:34px; }
+  .controls { display:flex; gap:8px; }
+  .btn {
+    font-family:var(--font-body); font-weight:600; font-size:13px; cursor:pointer;
+    color:var(--text); background:var(--surface-2); border:1px solid var(--outline);
+    border-radius:999px; padding:8px 14px; transition:transform .15s, background .2s, border-color .2s;
+  }
+  .btn:hover { transform:translateY(-2px); border-color:var(--primary); }
+  .btn:active { transform:translateY(0); }
+
+  /* hero */
+  .hero { text-align:center; padding:64px 0 44px; }
+  .badge {
+    width:104px; height:104px; margin:0 auto 26px; display:block;
+    animation:float 5s ease-in-out infinite; filter:drop-shadow(0 14px 30px var(--shadow));
+  }
+  @keyframes float { 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-12px);} }
+  .hero h1 { font-family:var(--font-display); font-weight:700; font-size:clamp(30px,7vw,46px);
+             letter-spacing:-1px; line-height:1.05; }
+  .hero p { color:var(--muted); margin-top:12px; font-size:17px; }
+  .chip {
+    display:inline-block; margin-top:20px; font-size:12.5px; font-weight:600;
+    color:var(--secondary); background:color-mix(in srgb, var(--secondary) 14%, transparent);
+    border:1px solid color-mix(in srgb, var(--secondary) 35%, transparent);
+    border-radius:999px; padding:6px 14px;
+  }
+
+  /* highlight grid */
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:14px; margin:28px 0 8px; }
+  .card {
+    background:var(--surface); border:1px solid var(--outline); border-radius:20px;
+    padding:20px 18px; transition:transform .25s ease, border-color .25s, box-shadow .25s;
+  }
+  .card:hover { transform:translateY(-5px); border-color:var(--primary); box-shadow:0 16px 34px var(--shadow); }
+  .card .ic {
+    width:44px; height:44px; border-radius:13px; display:grid; place-items:center; margin-bottom:13px;
+    background:color-mix(in srgb, var(--primary) 16%, transparent); color:var(--primary);
+  }
+  .card .ic svg { width:24px; height:24px; }
+  .card h3 { font-family:var(--font-display); font-weight:600; font-size:16px; margin-bottom:4px; }
+  .card p { color:var(--muted); font-size:13.5px; line-height:1.5; }
+
+  /* sections */
+  section.policy { margin-top:46px; }
+  .policy h2 {
+    font-family:var(--font-display); font-weight:700; font-size:15px; text-transform:uppercase;
+    letter-spacing:1.5px; color:var(--primary); margin-bottom:20px;
+  }
+  .item {
+    background:var(--surface); border:1px solid var(--outline); border-left:3px solid var(--primary);
+    border-radius:14px; padding:18px 20px; margin-bottom:14px;
+  }
+  .item h4 { font-family:var(--font-display); font-weight:600; font-size:17px; margin-bottom:6px; }
+  .item p { color:var(--muted); font-size:15px; }
+  .item a { color:var(--primary); text-decoration:none; font-weight:600; }
+  .item a:hover { text-decoration:underline; }
+
+  /* reveal animation */
+  .reveal { opacity:0; transform:translateY(26px); transition:opacity .6s ease, transform .6s cubic-bezier(.2,.8,.2,1); }
+  .reveal.visible { opacity:1; transform:none; }
+
+  footer { text-align:center; margin-top:56px; color:var(--muted); font-size:13.5px; }
+  footer .mail {
+    display:inline-block; margin-top:10px; font-weight:600; color:var(--text);
+    background:var(--surface-2); border:1px solid var(--outline); border-radius:999px;
+    padding:10px 20px; text-decoration:none; transition:transform .15s, border-color .2s;
+  }
+  footer .mail:hover { transform:translateY(-2px); border-color:var(--primary); }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, .badge, .bg-ops span { animation:none !important; transition:none !important; }
+    .reveal { opacity:1; transform:none; }
+  }
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="bg-ops" id="ops" aria-hidden="true"></div>
+
+  <header>
+    <div class="brand">
+      <svg viewBox="0 0 108 108" aria-hidden="true">
+        <defs>
+          <linearGradient id="bg" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#1E3A8A"/><stop offset="1" stop-color="#0D9488"/>
+          </linearGradient>
+        </defs>
+        <circle cx="54" cy="54" r="52" fill="url(#bg)"/>
+        <path d="M38 38 L70 70 M70 38 L38 70" stroke="#fff" stroke-width="11" stroke-linecap="round"/>
+        <circle cx="54" cy="26" r="4.5" fill="#fff"/><circle cx="54" cy="82" r="4.5" fill="#fff"/>
+      </svg>
+      <span>MathSharp</span>
+    </div>
+    <div class="controls">
+      <button class="btn" id="langBtn" onclick="toggleLang()">EN</button>
+      <button class="btn" id="themeBtn" onclick="toggleTheme()" aria-label="Ganti tema">🌙</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="hero">
+      <svg class="badge" viewBox="0 0 108 108" aria-hidden="true">
+        <circle cx="54" cy="54" r="52" fill="url(#bg)"/>
+        <path d="M38 38 L70 70 M70 38 L38 70" stroke="#fff" stroke-width="11" stroke-linecap="round"/>
+        <circle cx="54" cy="26" r="4.5" fill="#fff"/><circle cx="54" cy="82" r="4.5" fill="#fff"/>
+      </svg>
+      <h1 class="i18n" data-id="Kebijakan Privasi" data-en="Privacy Policy"></h1>
+      <p class="i18n" data-id="MathSharp menghormati privasimu sepenuhnya — by design."
+                      data-en="MathSharp respects your privacy completely — by design."></p>
+      <span class="chip i18n" data-id="Berlaku 17 Juni 2026" data-en="Effective 17 June 2026"></span>
+    </div>
+
+    <div class="grid">
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3 class="i18n" data-id="Nol Data" data-en="Zero Data"></h3>
+        <p class="i18n" data-id="Tidak ada data pribadi yang dikumpulkan." data-en="No personal data is collected."></p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div>
+        <h3 class="i18n" data-id="Nol Izin" data-en="Zero Permissions"></h3>
+        <p class="i18n" data-id="Tidak meminta izin sistem apa pun." data-en="Requests no system permissions."></p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 18"/><path d="M5 12.5a10 10 0 0 1 4-2.4M2 8.8a16 16 0 0 1 5-3.1"/><path d="M9 16a5 5 0 0 1 6 0M12 20h.01"/></svg></div>
+        <h3 class="i18n" data-id="100% Offline" data-en="100% Offline"></h3>
+        <p class="i18n" data-id="Bekerja tanpa koneksi internet." data-en="Works with no internet connection."></p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg></div>
+        <h3 class="i18n" data-id="Tanpa Iklan" data-en="No Ads"></h3>
+        <p class="i18n" data-id="Tanpa iklan & tanpa pelacakan." data-en="No ads, no tracking."></p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div>
+        <h3 class="i18n" data-id="Tanpa Akun" data-en="No Account"></h3>
+        <p class="i18n" data-id="Tidak perlu daftar atau login." data-en="No sign-up or login."></p>
+      </div>
+      <div class="card reveal">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div>
+        <h3 class="i18n" data-id="Lokal di Perangkat" data-en="On-Device Only"></h3>
+        <p class="i18n" data-id="Semua progres tersimpan lokal." data-en="All progress stays on your device."></p>
+      </div>
+    </div>
+
+    <section class="policy">
+      <h2 class="i18n" data-id="Selengkapnya" data-en="In Detail"></h2>
+
+      <div class="item reveal">
+        <h4 class="i18n" data-id="Data yang kami kumpulkan" data-en="Data we collect"></h4>
+        <p class="i18n"
+           data-id="Tidak ada. MathSharp tidak mengumpulkan, mengirim ke luar perangkat, atau membagikan data pribadi apa pun. Tidak ada nama, email, lokasi, kontak, atau identitas perangkat yang diakses."
+           data-en="None. MathSharp does not collect, transmit off-device, or share any personal data. No name, email, location, contacts, or device identifiers are accessed."></p>
+      </div>
+
+      <div class="item reveal">
+        <h4 class="i18n" data-id="Penyimpanan lokal" data-en="Local storage"></h4>
+        <p class="i18n"
+           data-id="Statistik latihan, skor, dan streak disimpan hanya di penyimpanan internal aplikasi (SQLite/DataStore). Data ini tidak pernah dikirim ke mana pun dan terhapus saat aplikasi di-uninstall atau saat kamu menekan 'Reset Progres'."
+           data-en="Practice statistics, scores, and streaks are stored only in the app's internal storage (SQLite/DataStore). This data is never transmitted anywhere and is deleted when you uninstall the app or tap 'Reset Progress'."></p>
+      </div>
+
+      <div class="item reveal">
+        <h4 class="i18n" data-id="Tanpa iklan & analitik" data-en="No ads & analytics"></h4>
+        <p class="i18n"
+           data-id="Aplikasi tidak memuat SDK iklan, tidak menggunakan Advertising ID, dan tidak memakai analitik pihak ketiga (tanpa Firebase/Google Analytics/Crashlytics)."
+           data-en="The app contains no ad SDKs, uses no Advertising ID, and uses no third-party analytics (no Firebase/Google Analytics/Crashlytics)."></p>
+      </div>
+
+      <div class="item reveal">
+        <h4 class="i18n" data-id="Privasi anak" data-en="Children's privacy"></h4>
+        <p class="i18n"
+           data-id="Aplikasi ini ditujukan untuk audiens dewasa umum (18+) dan bukan untuk anak-anak. Karena tidak ada data yang dikumpulkan dan tidak ada izin yang diminta, aplikasi ini patuh terhadap COPPA dan GDPR-K secara desain."
+           data-en="This app is directed to a general adult audience (18+) and is not directed to children. Because it collects no data and requests no permissions, it is compliant with COPPA and GDPR-K by design."></p>
+      </div>
+
+      <div class="item reveal">
+        <h4 class="i18n" data-id="Keamanan data" data-en="Data security"></h4>
+        <p class="i18n"
+           data-id="Tidak ada data yang meninggalkan perangkat, sehingga tidak ada transmisi yang perlu diamankan. Data di perangkat dilindungi oleh sandbox aplikasi Android."
+           data-en="No data leaves the device, so there is no transmission to secure. On-device data is protected by Android's app sandbox."></p>
+      </div>
+
+      <div class="item reveal">
+        <h4 class="i18n" data-id="Perubahan kebijakan" data-en="Policy changes"></h4>
+        <p class="i18n"
+           data-id="Bila kebijakan ini berubah, versi terbaru akan diposting di halaman ini dengan tanggal berlaku yang baru."
+           data-en="If this policy changes, the updated version will be posted on this page with a new effective date."></p>
+      </div>
+
+      <div class="item reveal">
+        <h4 class="i18n" data-id="Kontak" data-en="Contact"></h4>
+        <p>
+          <span class="i18n" data-id="Pertanyaan? Hubungi kami di" data-en="Questions? Reach us at"></span>
+          <a href="mailto:mikail@avos.co.id">mikail@avos.co.id</a>.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <p class="i18n" data-id="MathSharp — Latihan mental math. Offline · Nol izin · Tanpa iklan."
+                     data-en="MathSharp — Mental math workout. Offline · Zero permissions · No ads."></p>
+      <a class="mail" href="mailto:mikail@avos.co.id">mikail@avos.co.id</a>
+      <p style="margin-top:18px; opacity:.7;">© 2026 AVOS</p>
+    </footer>
+  </main>
+
+<script>
+  // ── i18n ──
+  let lang = 'id';
+  function applyLang() {
+    document.documentElement.lang = lang;
+    document.querySelectorAll('.i18n').forEach(el => {
+      el.textContent = el.getAttribute('data-' + lang);
+    });
+    document.getElementById('langBtn').textContent = lang === 'id' ? 'EN' : 'ID';
+  }
+  function toggleLang() { lang = (lang === 'id') ? 'en' : 'id'; applyLang(); }
+
+  // ── theme ──
+  function setTheme(t) {
+    document.documentElement.setAttribute('data-theme', t);
+    document.getElementById('themeBtn').textContent = t === 'dark' ? '🌙' : '☀️';
+  }
+  function toggleTheme() {
+    const cur = document.documentElement.getAttribute('data-theme');
+    setTheme(cur === 'dark' ? 'light' : 'dark');
+  }
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) setTheme('light');
+
+  // ── floating math operators ──
+  (function () {
+    const ops = ['+','−','×','÷','%','=','√','²','7','3'];
+    const host = document.getElementById('ops');
+    for (let i = 0; i < 18; i++) {
+      const s = document.createElement('span');
+      s.textContent = ops[i % ops.length];
+      s.style.left = (Math.random() * 100) + 'vw';
+      s.style.top = (Math.random() * 100) + 'vh';
+      s.style.fontSize = (24 + Math.random() * 54) + 'px';
+      s.style.animationDuration = (10 + Math.random() * 16) + 's';
+      s.style.animationDelay = (-Math.random() * 16) + 's';
+      host.appendChild(s);
+    }
+  })();
+
+  // ── scroll reveal ──
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  applyLang();
+</script>
+</body>
+</html>

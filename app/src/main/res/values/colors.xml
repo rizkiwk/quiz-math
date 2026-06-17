@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Latar splash / window awal — dark navy (sesuai BRAND_GUIDELINE dark default) -->
+    <color name="splash_bg">#0E1117</color>
+    <color name="ic_launcher_bg_start">#1E3A8A</color>
+    <color name="ic_launcher_bg_end">#0D9488</color>
+</resources>

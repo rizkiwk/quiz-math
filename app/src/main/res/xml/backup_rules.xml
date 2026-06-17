@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Semua data lokal (Room + DataStore) boleh ikut auto-backup; tidak ada data sensitif/jaringan. -->
+<full-backup-content />

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MathSharp</string>
+    <string name="app_tagline">Asah otakmu tiap hari</string>
+
+    <!-- Nav / umum -->
+    <string name="play">Mulai Latihan</string>
+    <string name="daily_workout">Latihan Harian</string>
+    <string name="practice">Latihan Bebas</string>
+    <string name="stats">Statistik</string>
+    <string name="achievements">Pencapaian</string>
+    <string name="settings">Pengaturan</string>
+    <string name="back">Kembali</string>
+
+    <!-- Workout -->
+    <string name="score">Skor</string>
+    <string name="accuracy">Akurasi</string>
+    <string name="streak">Streak</string>
+    <string name="correct">Benar!</string>
+    <string name="almost">Hampir! Coba lagi</string>
+    <string name="time_up">Waktu habis</string>
+
+    <!-- Result -->
+    <string name="result_title">Selesai!</string>
+    <string name="personal_best">Rekor pribadi baru!</string>
+    <string name="play_again">Main Lagi</string>
+    <string name="home">Beranda</string>
+
+    <!-- Settings -->
+    <string name="sound_effects">Efek Suara</string>
+    <string name="music">Musik</string>
+    <string name="theme">Tema</string>
+    <string name="theme_system">Ikuti Sistem</string>
+    <string name="theme_dark">Gelap</string>
+    <string name="theme_light">Terang</string>
+    <string name="reset_progress">Reset Progres</string>
+    <string name="privacy_policy">Kebijakan Privasi</string>
+    <string name="about">Tentang</string>
+</resources>
