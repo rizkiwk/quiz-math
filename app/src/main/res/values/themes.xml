@@ -6,7 +6,8 @@
         <item name="android:windowBackground">@color/splash_bg</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
-        <item name="android:windowLightStatusBar">false</item>
+        <!-- Kontras ikon status/nav bar diatur runtime (SideEffect di MainActivity) agar
+             mengikuti tema terang/gelap; windowLightStatusBar statis dibuang karna salah utk tema terang. -->
     </style>
 
     <!-- Splash via androidx.core:core-splashscreen -->
