@@ -10,7 +10,7 @@
 
 **Tagline:** Asah otakmu tiap hari · *Daily mental math workout.*
 
-**Apa ini:** Game latihan **mental math** untuk **DEWASA (18+)** — Android phone-only, offline penuh, nol izin, tanpa iklan.
+**Apa ini:** Game latihan **mental math** untuk **DEWASA (18+)** — Android phone-only, offline penuh, nol izin.
 
 **⚠️ KEPUTUSAN PIVOT (jangan dibalik tanpa diskusi):** dulu ditargetkan untuk anak SD, tapi target <13 memicu **Google Play Families Policy** → review lambat (kategori sensitif). Prioritas #1 user = **rilis tercepat**, jadi di-pivot ke **dewasa 18+ "brain training"** (lolos Families, jalur cepat). Konsekuensi: **estetika WAJIB minimalis-dewasa, BUKAN kekanakan** — mascot/kartun/font bulat/warna pelangi bisa membuat Google mereklasifikasi jadi child-directed. Lihat `SARAN_TIM.md`.
 
@@ -32,7 +32,7 @@
 | Audio | SoundPool (SFX) + MediaPlayer (musik) — **nol izin** | platform |
 | Font | Space Grotesk (variable, display/numerik) + Plus Jakarta Sans (body) | bundled OFL |
 | Build | AGP 8.13.1, Gradle 8.13 | — |
-| Min/Target/Compile SDK | **26 / 35 / 35** | — |
+| Min/Target/Compile SDK | **26 / 36 / 36** | — |
 
 ---
 

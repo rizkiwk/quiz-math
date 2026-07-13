@@ -18,7 +18,7 @@
 | Penyimpanan | **Room (SQLite)** untuk stats/sesi/achievement + **DataStore** untuk setting/profil/streak | Tepat batasan "local storage / SQLite saja" |
 | Form factor | **Phone-only** (portrait, `appCategory="game"`, filter large screen) | Sesuai permintaan; games dikecualikan dari mandat large-screen A16/17 |
 | Arsitektur | **Single-module `:app`**, MVVM, **manual DI (skip Hilt)** | Tercepat & paling rendah-risiko untuk ship cepat |
-| minSdk / target / compile | **24 / 35 / 35** | targetSdk 35 wajib app baru 2026; verifikasi ulang saat submit |
+| minSdk / target / compile | **24 / 36 / 36** | targetSdk 36 (headroom lewat ~Agu 2026); verifikasi ulang saat submit |
 | Output | **AAB** ter-sign + R8 (minify + shrink) + Play App Signing | Wajib AAB; profil ramping |
 | Data Safety | **"No data collected / No data shared"** | Tanpa SDK iklan/analitik/jaringan |
 | Deklarasi umur | **18 and over** + **Restrict Minor Access** | Satu-satunya bracket yang lolos bersih dari Families |
@@ -185,7 +185,7 @@ konfetti = "2.0.5"              # nl.dionsegijn:konfetti-compose
 kotlinxSerialization = "1.7.3"
 coroutines = "1.9.0"
 ```
-**SDK:** `minSdk = 24` (Android 7.0, jangkauan ~98%+), `compileSdk = 35`, `targetSdk = 35` (wajib app baru 2026; verifikasi ulang angka di Play Console saat submit).
+**SDK:** `minSdk = 24` (Android 7.0, jangkauan ~98%+), `compileSdk = 36`, `targetSdk = 36` (wajib app baru 2026; verifikasi ulang angka di Play Console saat submit).
 
 ### 3.3 Inventori layar (lolos "minimum functionality")
 
@@ -324,7 +324,7 @@ Games **dikecualikan** dari mandat orientasi/resize large-screen Android 16/17 �
 
 ## 9. 🚀 Urutan Build & Rilis (jalur tercepat, akun Organisasi)
 
-1. **Identitas & SDK:** `applicationId`, `versionCode=1`, `versionName="1.0"`, `minSdk=24`, `target/compileSdk=35`. Build debug di HP asli.
+1. **Identitas & SDK:** `applicationId`, `versionCode=1`, `versionName="1.0"`, `minSdk=24`, `target/compileSdk=36`. Build debug di HP asli.
 2. **Signing & shrink:** keystore di `~/keystores`; `signingConfigs.release`; R8 `minify+shrink`; `-keep` Room & serialization → **`bundleRelease`**.
 3. **Smoke-test AAB rilis:** `bundletool build-apks --mode=universal` → install HP asli → jalankan flow penuh (sekaligus ambil **screenshot asli**).
 4. **Host Privacy Policy** (paralel — gating): publish `PRIVACY_POLICY.md` ke URL publik (GitHub Pages/domain).

@@ -1,6 +1,6 @@
 # MathSharp — Mental Math Brain Training 🧠
 
-Game latihan **mental math** untuk **dewasa (18+)**. Android, phone-only, **nol izin**, **offline penuh**, **tanpa iklan / tanpa data keluar device**.
+Game latihan **mental math** untuk **dewasa (18+)**. Android, phone-only, **nol izin**, **offline penuh**, data tersimpan lokal di perangkat.
 
 > Audiens dewasa dipilih secara sengaja agar **lolos Google Play Families Policy → review tercepat**. Lihat `SARAN_TIM.md` untuk analisis lengkap & `BRAND_GUIDELINE.md` untuk sistem desain.
 
@@ -26,7 +26,7 @@ Game latihan **mental math** untuk **dewasa (18+)**. Android, phone-only, **nol 
 
 Kotlin 2.0.21 · Jetpack Compose + Material 3 · Room (SQLite, KSP) · DataStore · Navigation Compose (type-safe) · Konfetti · MVVM + manual DI · single-module.
 
-minSdk 26 · target/compileSdk 35 · AGP 8.13.1 · Gradle 8.13.
+minSdk 26 · target/compileSdk 36 · AGP 8.13.1 · Gradle 8.13.
 
 ## 📂 Struktur
 

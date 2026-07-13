@@ -17,12 +17,12 @@ val keystoreProps = Properties().apply {
 
 android {
     namespace = "com.avos.mathsharp"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.avos.mathsharp"
         minSdk = 26          // Android 8.0 — adaptive icon native (tanpa PNG fallback), jangkauan ~96%+
-        targetSdk = 35       // wajib app baru 2026; verifikasi ulang tenggat Play saat submit
+        targetSdk = 36       // headroom lewat tenggat ~Agustus 2026; verifikasi ulang di Play Console saat submit
         versionCode = 1
         versionName = "1.0"
         vectorDrawables { useSupportLibrary = true }
@@ -89,6 +89,7 @@ dependencies {
 
     implementation(libs.androidx.datastore.preferences)
     implementation(libs.konfetti.compose)
+    implementation(libs.androidx.lottie.compose)
     implementation(libs.kotlinx.serialization.json)
     implementation(libs.kotlinx.coroutines.android)
 

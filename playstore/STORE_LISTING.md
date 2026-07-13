@@ -1,7 +1,7 @@
 # Play Store Listing — MathSharp
 
 > Copy siap-tempel ke Google Play Console. Audiens **18+ (non-child-directed)** — bahasa & gaya sengaja "dewasa/produktivitas".
-> Kategori: **Education** (atau Games › Educational). Konten: Everyone. Iklan: Tidak. IAP: Tidak.
+> Kategori: **Education** (atau Games › Educational). Konten: Everyone. IAP: Tidak.
 
 ---
 
@@ -14,7 +14,7 @@ MathSharp: Mental Math
 
 **Deskripsi singkat** (≤80 kar.)
 ```
-Latihan mental math harian. Asah otakmu — cepat, offline, tanpa iklan.
+Latihan mental math harian. Asah otakmu — cepat, ringan, & fokus.
 ```
 
 **Deskripsi lengkap** (≤4000 kar.)
@@ -33,7 +33,7 @@ Bukan sekadar hitung-hitungan biasa. MathSharp memberi latihan singkat 60–90 d
 🔒 PRIVASI & RINGAN
 • 100% OFFLINE — tidak butuh internet
 • TANPA izin apa pun
-• TANPA iklan, TANPA akun, TANPA pelacakan
+• Fokus penuh — tanpa gangguan
 • Semua data tersimpan lokal di perangkatmu
 • Ukuran mungil, ringan di HP
 
@@ -56,7 +56,7 @@ MathSharp: Mental Math
 
 **Short description** (≤80 chars)
 ```
-Daily mental math workout. Sharpen your brain — fast, offline, no ads.
+Daily mental math workout. Sharpen your brain — fast, light & focused.
 ```
 
 **Full description** (≤4000 chars)
@@ -75,7 +75,7 @@ This is more than simple arithmetic. MathSharp gives you short 60–90 second se
 🔒 PRIVATE & LIGHTWEIGHT
 • 100% OFFLINE — no internet needed
 • ZERO permissions
-• NO ads, NO account, NO tracking
+• Distraction-free — pure focus on training
 • All data stays on your device
 • Tiny size, light on your phone
 

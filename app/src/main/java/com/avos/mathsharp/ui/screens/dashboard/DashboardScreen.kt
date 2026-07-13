@@ -29,6 +29,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.layout.size
+import androidx.compose.ui.graphics.graphicsLayer
+import com.airbnb.lottie.compose.LottieAnimation
+import com.airbnb.lottie.compose.LottieCompositionSpec
+import com.airbnb.lottie.compose.LottieConstants
+import com.airbnb.lottie.compose.animateLottieCompositionAsState
+import com.airbnb.lottie.compose.rememberLottieComposition
+import com.avos.mathsharp.R
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.avos.mathsharp.domain.model.Difficulty
@@ -71,6 +79,8 @@ private fun DashboardContent(
     val cs = MaterialTheme.colorScheme
     var pickerSkill by remember { mutableStateOf<Skill?>(null) }
     val greeting = if (state.playerName.isBlank()) "MathSharp" else "Halo, ${state.playerName} 👋"
+    val pulse by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.anim_pulse))
+    val pulseProgress by animateLottieCompositionAsState(pulse, iterations = LottieConstants.IterateForever)
 
     Column(
         modifier = Modifier
@@ -99,7 +109,14 @@ private fun DashboardContent(
                 modifier = Modifier.padding(20.dp).fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
-                Text("🔥", style = MaterialTheme.typography.headlineMedium)
+                Box(contentAlignment = Alignment.Center) {
+                    LottieAnimation(
+                        composition = pulse,
+                        progress = { pulseProgress },
+                        modifier = Modifier.size(76.dp).graphicsLayer { alpha = 0.6f }
+                    )
+                    Text("🔥", style = MaterialTheme.typography.headlineMedium)
+                }
                 Column(Modifier.padding(start = 16.dp)) {
                     Text(
                         "${state.streak} hari",

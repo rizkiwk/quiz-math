@@ -85,7 +85,7 @@
 - **Bottom nav max 3–4:** Play · Stats · Achievements · Settings.
 - **Feedback instan** tiap tap (<150 ms): visual + SFX + haptic.
 - **Timer = bagian inti** (brain-training = speed), tapi visual tenang (bukan merah berkedip panik).
-- **NO dark pattern:** tanpa FOMO, tanpa notif menuduh, tanpa pay-to-win, tanpa iklan.
+- **NO dark pattern:** tanpa FOMO, tanpa notif menuduh, tanpa pay-to-win.
 
 ---
 

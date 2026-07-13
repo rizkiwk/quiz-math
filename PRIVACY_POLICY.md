@@ -28,9 +28,9 @@ This application **does not collect, transmit off-device, or share any personal 
 
 - **No system permissions** are requested (zero `uses-permission` entries).
 - **No internet access** — the app runs fully **offline**.
-- **No ads**, no advertising SDKs, no Advertising ID (AD_ID).
+- **No third-party SDKs** (analytics/tracking); the app does not use the Advertising ID (AD_ID).
 - **No third-party analytics** (no Firebase/Google Analytics/Crashlytics).
-- **No account or login**; we do not collect your name, email, location, contacts, or device identifiers.
+- The app does **not** request your name, email, location, contacts, or device identifiers.
 - **All data stays on your device.** Practice statistics, scores, streaks, and settings are stored only in the app's internal storage (SQLite/DataStore). This data is **never transmitted anywhere** and is **deleted** when you uninstall the app or tap "Reset progress".
 
 ### Children's privacy

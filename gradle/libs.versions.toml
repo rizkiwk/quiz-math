@@ -38,8 +38,8 @@ kotlinx-serialization-json = { group = "org.jetbrains.kotlinx", name = "kotlinx-
 kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 
-# Tersedia bila nanti menambah aset animasi Lottie (bundled JSON, nol izin):
-# androidx-lottie-compose = { group = "com.airbnb.android", name = "lottie-compose", version = "6.7.1" }
+# Aset animasi Lottie (bundled JSON, nol izin — AKTIF):
+androidx-lottie-compose = { group = "com.airbnb.android", name = "lottie-compose", version = "6.7.1" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
