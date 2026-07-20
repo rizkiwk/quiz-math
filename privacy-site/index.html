@@ -3,23 +3,21 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Kebijakan Privasi — MathSharp</title>
-<meta name="description" content="MathSharp tidak mengumpulkan data apa pun. Tanpa izin, tanpa internet. Semua data lokal di perangkat." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<title>Kebijakan Privasi — MathBlow</title>
+<meta name="description" content="MathBlow tidak mengumpulkan data apa pun. Tanpa izin, tanpa internet. Semua data lokal di perangkat." />
 <style>
+  /* Self-contained: tanpa font/aset eksternal — selaras klaim "tanpa internet". */
   :root {
-    --bg:#0E1117; --surface:#161B26; --surface-2:#1F2630; --primary:#4C8DFF;
-    --secondary:#2DD4BF; --accent:#F59E0B; --text:#E6EAF2; --muted:#9AA4B2;
-    --outline:#2A323D; --success:#34D399; --shadow:rgba(0,0,0,.45);
+    --bg:#0D0B12; --surface:#17141F; --surface-2:#201C2C; --primary:#8C71FF;
+    --secondary:#FF8A50; --accent:#FFB020; --text:#EDEAF5; --muted:#A79FBD;
+    --outline:#2C283A; --success:#34D399; --shadow:rgba(0,0,0,.45);
     --font-display:'Space Grotesk',system-ui,sans-serif;
     --font-body:'Plus Jakarta Sans',system-ui,sans-serif;
   }
   html[data-theme="light"] {
-    --bg:#F6F8FB; --surface:#FFFFFF; --surface-2:#EDF1F7; --primary:#2563EB;
-    --secondary:#0D9488; --accent:#D97706; --text:#111827; --muted:#4B5563;
-    --outline:#D1D9E6; --success:#059669; --shadow:rgba(20,40,80,.10);
+    --bg:#FAF9FC; --surface:#FFFFFF; --surface-2:#EFEBF7; --primary:#5B3DF5;
+    --secondary:#C2410C; --accent:#B45309; --text:#19141F; --muted:#54495F;
+    --outline:#DCD5E8; --success:#059669; --shadow:rgba(20,40,80,.10);
   }
   * { box-sizing:border-box; margin:0; padding:0; }
   body {
@@ -41,7 +39,7 @@
   .glow {
     position:fixed; top:-180px; left:50%; transform:translateX(-50%);
     width:680px; height:480px; z-index:0; pointer-events:none; filter:blur(90px);
-    background:radial-gradient(circle, rgba(76,141,255,.30), transparent 65%);
+    background:radial-gradient(circle, rgba(140,113,255,.30), transparent 65%);
   }
   .wrap { position:relative; z-index:1; max-width:760px; margin:0 auto; padding:0 22px 80px; }
 
@@ -138,14 +136,13 @@
       <svg viewBox="0 0 108 108" aria-hidden="true">
         <defs>
           <linearGradient id="bg" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse">
-            <stop offset="0" stop-color="#1E3A8A"/><stop offset="1" stop-color="#0D9488"/>
+            <stop offset="0" stop-color="#3B1E88"/><stop offset="1" stop-color="#EA580C"/>
           </linearGradient>
         </defs>
         <circle cx="54" cy="54" r="52" fill="url(#bg)"/>
-        <path d="M38 38 L70 70 M70 38 L38 70" stroke="#fff" stroke-width="11" stroke-linecap="round"/>
-        <circle cx="54" cy="26" r="4.5" fill="#fff"/><circle cx="54" cy="82" r="4.5" fill="#fff"/>
+        <path fill="#fff" d="M54,24 L63.19,44.81 L84,54 L63.19,63.19 L54,84 L44.81,63.19 L24,54 L44.81,44.81 Z"/>
       </svg>
-      <span>MathSharp</span>
+      <span>MathBlow</span>
     </div>
     <div class="controls">
       <button class="btn" id="langBtn" onclick="toggleLang()">EN</button>
@@ -157,12 +154,11 @@
     <div class="hero">
       <svg class="badge" viewBox="0 0 108 108" aria-hidden="true">
         <circle cx="54" cy="54" r="52" fill="url(#bg)"/>
-        <path d="M38 38 L70 70 M70 38 L38 70" stroke="#fff" stroke-width="11" stroke-linecap="round"/>
-        <circle cx="54" cy="26" r="4.5" fill="#fff"/><circle cx="54" cy="82" r="4.5" fill="#fff"/>
+        <path fill="#fff" d="M54,24 L63.19,44.81 L84,54 L63.19,63.19 L54,84 L44.81,63.19 L24,54 L44.81,44.81 Z"/>
       </svg>
       <h1 class="i18n" data-id="Kebijakan Privasi" data-en="Privacy Policy"></h1>
-      <p class="i18n" data-id="MathSharp menghormati privasimu sepenuhnya — by design."
-                      data-en="MathSharp respects your privacy completely — by design."></p>
+      <p class="i18n" data-id="MathBlow menghormati privasimu sepenuhnya — by design."
+                      data-en="MathBlow respects your privacy completely — by design."></p>
       <span class="chip i18n" data-id="Berlaku 17 Juni 2026" data-en="Effective 17 June 2026"></span>
     </div>
 
@@ -205,8 +201,8 @@
       <div class="item reveal">
         <h4 class="i18n" data-id="Data yang kami kumpulkan" data-en="Data we collect"></h4>
         <p class="i18n"
-           data-id="Tidak ada. MathSharp tidak mengumpulkan, mengirim ke luar perangkat, atau membagikan data pribadi apa pun. Tidak ada nama, email, lokasi, kontak, atau identitas perangkat yang diakses."
-           data-en="None. MathSharp does not collect, transmit off-device, or share any personal data. No name, email, location, contacts, or device identifiers are accessed."></p>
+           data-id="Tidak ada. MathBlow tidak mengumpulkan, mengirim ke luar perangkat, atau membagikan data pribadi apa pun. Tidak ada nama, email, lokasi, kontak, atau identitas perangkat yang diakses."
+           data-en="None. MathBlow does not collect, transmit off-device, or share any personal data. No name, email, location, contacts, or device identifiers are accessed."></p>
       </div>
 
       <div class="item reveal">
@@ -248,16 +244,16 @@
         <h4 class="i18n" data-id="Kontak" data-en="Contact"></h4>
         <p>
           <span class="i18n" data-id="Pertanyaan? Hubungi kami di" data-en="Questions? Reach us at"></span>
-          <a href="mailto:mikail@avos.co.id">mikail@avos.co.id</a>.
+          <a href="mailto:bowow657@gmail.com">bowow657@gmail.com</a>.
         </p>
       </div>
     </section>
 
     <footer>
-      <p class="i18n" data-id="MathSharp — Latihan mental math. Offline · Nol izin · Data lokal."
-                     data-en="MathSharp — Mental math workout. Offline · Zero permissions · Local data."></p>
-      <a class="mail" href="mailto:mikail@avos.co.id">mikail@avos.co.id</a>
-      <p style="margin-top:18px; opacity:.7;">© 2026 AVOS</p>
+      <p class="i18n" data-id="MathBlow — Latihan mental math. Offline · Nol izin · Data lokal."
+                     data-en="MathBlow — Mental math workout. Offline · Zero permissions · Local data."></p>
+      <a class="mail" href="mailto:bowow657@gmail.com">bowow657@gmail.com</a>
+      <p style="margin-top:18px; opacity:.7;">© 2026 MathBlow</p>
     </footer>
   </main>
 

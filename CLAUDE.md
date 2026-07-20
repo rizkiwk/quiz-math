@@ -1,12 +1,12 @@
 # CLAUDE.md — Kingdom of Science Multi-Agent AI Core
 
-> *"Kukuku... 10 milyar persen siap melanjutkan MathSharp!"*
+> *"Kukuku... 10 milyar persen siap melanjutkan MathBlow!"*
 > Selalu respond dalam **Bahasa Indonesia**, tone energetik & genius (Senku · Sai · Chrome · Xeno).
 > Baca file ini di awal sesi baru untuk memulihkan konteks penuh sebelum menyentuh kode.
 
 ---
 
-## 📱 Proyek: MathSharp
+## 📱 Proyek: MathBlow
 
 **Tagline:** Asah otakmu tiap hari · *Daily mental math workout.*
 
@@ -14,7 +14,7 @@
 
 **⚠️ KEPUTUSAN PIVOT (jangan dibalik tanpa diskusi):** dulu ditargetkan untuk anak SD, tapi target <13 memicu **Google Play Families Policy** → review lambat (kategori sensitif). Prioritas #1 user = **rilis tercepat**, jadi di-pivot ke **dewasa 18+ "brain training"** (lolos Families, jalur cepat). Konsekuensi: **estetika WAJIB minimalis-dewasa, BUKAN kekanakan** — mascot/kartun/font bulat/warna pelangi bisa membuat Google mereklasifikasi jadi child-directed. Lihat `SARAN_TIM.md`.
 
-**Status:** Production-ready. Build hijau, unit test lolos, **AAB rilis 4.2 MB ter-sign nol-izin**. Aset toko lengkap. Sisa: user host privacy policy + submit Play Console.
+**Status:** Production-ready pasca-rebrand (terverifikasi 20 Jul 2026): build hijau, 8/8 unit test, **AAB rilis 5,2 MB ter-sign `MATHBLOW`, package `id.quiz.mathblow`, nol-izin**. Aset toko lengkap. Sisa: pastikan privacy-site live menyajikan konten MathBlow terbaru (push) + submit Play Console.
 
 ---
 
@@ -36,11 +36,11 @@
 
 ---
 
-## 📂 Struktur (package `com.avos.mathsharp`)
+## 📂 Struktur (package `id.quiz.mathblow`)
 
 ```
-app/src/main/java/com/avos/mathsharp/
-├── MathSharpApp.kt · MainActivity.kt
+app/src/main/java/id/quiz/mathblow/
+├── MathBlowApp.kt · MainActivity.kt
 ├── di/AppContainer.kt              ← DI manual (db, repos, generator, sound, music)
 ├── domain/
 │   ├── QuestionGenerator.kt        ← prosedural + distractor (guard orde magnitude)
@@ -62,9 +62,9 @@ app/src/test/  ← QuestionGeneratorTest (jawaban benar, distractor se-orde, tru
 ## 🧠 Keputusan Inti
 
 - **Soal 100% prosedural** (nol bank-soal). 10 skill × 3 kesulitan (Easy=lvl1, Medium=3, Hard=5).
-- **Distractor** dari model kesalahan masuk akal, difilter agar **non-negatif & dalam 1 orde magnitude** dari jawaban (cegah opsi "salah jelas"). Diuji ketat.
+- **Distractor** dari model kesalahan masuk akal, difilter agar **non-negatif & dalam 1 orde magnitude** dari jawaban (cegah opsi "salah jelas"). Diuji ketat. Plus **guard anti-duplikat prompt per sesi** (retry ≤8) di `WorkoutViewModel`.
 - **Storage:** Room untuk sesi/rekor/achievement, DataStore untuk setting/streak/nama.
-- **Nol izin:** SFX=SoundPool(res/raw), getar=Compose haptic (BUKAN Vibrator/VIBRATE), keep-screen=FLAG_KEEP_SCREEN_ON, font=bundled (BUKAN downloadable). JANGAN tambah SDK iklan/analitik/Firebase.
+- **Nol izin:** SFX=SoundPool(res/raw), getar=Compose haptic (BUKAN Vibrator/VIBRATE), keep-screen=`View.keepScreenOn` selama sesi latihan (`WorkoutScreen`, tanpa WAKE_LOCK), font=bundled (BUKAN downloadable). JANGAN tambah SDK iklan/analitik/Firebase.
 - **Phone-only:** `<supports-screens>` large/xlarge=false, `appCategory="game"`, portrait lock.
 
 ---
@@ -77,7 +77,7 @@ export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
 ./gradlew :app:testDebugUnitTest
 ./gradlew :app:bundleRelease            # AAB rilis (R8 + sign)
 ```
-- **Keystore:** `~/keystores/mathsharp-release.jks` (+ `mathsharp-keystore.properties`), RSA 2048, valid 30 thn. **DI LUAR REPO — backup wajib.**
+- **Keystore:** `~/keystores/mathblow-release.jks` (+ `mathblow-keystore.properties`), RSA 2048, valid 30 thn. **DI LUAR REPO — backup wajib.**
 - **Audit nol-izin:** `aapt2 dump permissions app-release.apk` → hanya `DYNAMIC_RECEIVER_NOT_EXPORTED` (signature internal androidx, bukan izin sistem).
 - **Play Console:** target audience **18+ + Restrict Minor Access**, Data Safety "no data", Content rating Everyone. Aset di `playstore/`.
 

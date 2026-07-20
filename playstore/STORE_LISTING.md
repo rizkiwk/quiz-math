@@ -1,4 +1,4 @@
-# Play Store Listing — MathSharp
+# Play Store Listing — MathBlow
 
 > Copy siap-tempel ke Google Play Console. Audiens **18+ (non-child-directed)** — bahasa & gaya sengaja "dewasa/produktivitas".
 > Kategori: **Education** (atau Games › Educational). Konten: Everyone. IAP: Tidak.
@@ -9,7 +9,7 @@
 
 **Nama aplikasi** (≤30 kar.)
 ```
-MathSharp: Mental Math
+MathBlow: Mental Math
 ```
 
 **Deskripsi singkat** (≤80 kar.)
@@ -19,11 +19,11 @@ Latihan mental math harian. Asah otakmu — cepat, ringan, & fokus.
 
 **Deskripsi lengkap** (≤4000 kar.)
 ```
-Asah otakmu setiap hari dengan MathSharp — latihan mental math cepat untuk menjaga ketajaman berpikir.
+Asah otakmu setiap hari dengan MathBlow — latihan mental math cepat untuk menjaga ketajaman berpikir.
 
-Bukan sekadar hitung-hitungan biasa. MathSharp memberi latihan singkat 60–90 detik yang menantang kecepatan dan ketepatanmu, lengkap dengan statistik dan streak harian biar kamu terus termotivasi.
+Bukan sekadar hitung-hitungan biasa. MathBlow memberi latihan singkat 60–90 detik yang menantang kecepatan dan ketepatanmu, lengkap dengan statistik dan streak harian biar kamu terus termotivasi.
 
-⚡ KENAPA MATHSHARP?
+⚡ KENAPA MATHBLOW?
 • Soal tak terbatas — dibangkitkan otomatis, tidak pernah hafal jawaban
 • 10 jenis latihan: penjumlahan, pengurangan, perkalian, pembagian, persen, deret angka, urutan operasi, kuadrat & akar, benar/salah, dan angka hilang
 • 3 tingkat kesulitan: Mudah, Sedang, Sulit
@@ -51,7 +51,7 @@ Mulai latihan harianmu sekarang — otak yang tajam dilatih, bukan diwariskan. K
 
 **App name** (≤30 chars)
 ```
-MathSharp: Mental Math
+MathBlow: Mental Math
 ```
 
 **Short description** (≤80 chars)
@@ -61,11 +61,11 @@ Daily mental math workout. Sharpen your brain — fast, light & focused.
 
 **Full description** (≤4000 chars)
 ```
-Sharpen your mind every day with MathSharp — a fast mental math workout that keeps your thinking quick and accurate.
+Sharpen your mind every day with MathBlow — a fast mental math workout that keeps your thinking quick and accurate.
 
-This is more than simple arithmetic. MathSharp gives you short 60–90 second sessions that challenge your speed and precision, with daily streaks and detailed stats to keep you motivated.
+This is more than simple arithmetic. MathBlow gives you short 60–90 second sessions that challenge your speed and precision, with daily streaks and detailed stats to keep you motivated.
 
-⚡ WHY MATHSHARP?
+⚡ WHY MATHBLOW?
 • Endless questions — procedurally generated, never memorize answers
 • 10 training types: addition, subtraction, multiplication, division, percentages, number sequences, order of operations, squares & roots, true/false, and missing numbers
 • 3 difficulty levels: Easy, Medium, Hard
@@ -95,7 +95,7 @@ Start your daily workout now — a sharp mind is trained, not inherited.
 |---|---|
 | Kategori | Education (atau Games › Educational) |
 | Tag | brain training, mental math, math, puzzle |
-| Email kontak | mikail@avos.co.id |
+| Email kontak | bowow657@gmail.com |
 | Privacy Policy | (host `PRIVACY_POLICY.md` → URL publik) |
 | Target audience | **18 and over** + Restrict Minor Access |
 | Ads | No · IAP: No · Data: No data collected |

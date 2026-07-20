@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MathSharp"
+rootProject.name = "MathBlow"
 include(":app")

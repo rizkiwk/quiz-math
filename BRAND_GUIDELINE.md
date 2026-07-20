@@ -7,7 +7,7 @@
 
 ## 1. Brand Direction
 
-- **Nama (kandidat, register dewasa):** *MathSharp* · *Sharpen* · *Brain Reps* · *NumberFit* · *Tally — Mental Math* · pola pemenang: **"[Brand] — Mental Math Brain Training"**.
+- **Nama (kandidat, register dewasa):** *MathBlow* · *Sharpen* · *Brain Reps* · *NumberFit* · *Tally — Mental Math* · pola pemenang: **"[Brand] — Mental Math Brain Training"**.
 - **Tone of voice:** ringkas, percaya diri, berbasis data. "Sharpen", "Focus", "Streak", "Personal best", "Stats". Hindari bahasa kekanakan ("ayo bisa!", "hebat sekali adik!").
 - **Personality:** tajam, tenang, modern, sedikit "techy/precision". Vibe: Elevate × Headspace × kalkulator premium.
 - **Ikon:** mark **abstrak/numerik** (mis. glyph "×" atau bracket minimalis dalam lingkaran gradient blue→teal). **TANPA** karakter, wajah, mata, atau kartun.

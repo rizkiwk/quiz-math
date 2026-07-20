@@ -1,7 +1,7 @@
 # Privacy Policy — quiz-math (Mental Math / Brain Training)
 
 **Effective date:** 16 June 2026
-**Developer contact:** mikail@avos.co.id
+**Developer contact:** bowow657@gmail.com
 
 > Host dokumen ini di URL publik (mis. GitHub Pages atau domain sendiri) **sebelum** submit ke Google Play. URL ini wajib diisi di Play Console (Data safety & target audience), meski aplikasi tidak mengumpulkan data apa pun.
 
@@ -43,4 +43,4 @@ No data leaves the device, so there is no transmission to secure. On-device data
 If this policy changes, the updated version will be posted at this URL with a new effective date.
 
 ### Contact
-Questions: **mikail@avos.co.id**
+Questions: **bowow657@gmail.com**

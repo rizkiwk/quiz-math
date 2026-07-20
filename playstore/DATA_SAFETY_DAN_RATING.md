@@ -1,4 +1,4 @@
-# ✅ Jawaban Form "App Content" Play Console — MathSharp (`com.avos.mathsharp`)
+# ✅ Jawaban Form "App Content" Play Console — MathBlow (`id.quiz.mathblow`)
 
 > Panduan jawaban presisi untuk setiap form di **Play Console → Policy and programs → App content**.
 > Semua jawaban berbasis perilaku app yang sudah diverifikasi dari source code: **offline, nol izin,
@@ -40,12 +40,12 @@ Jawab semua kategori sensitif dengan **No** (tanpa kekerasan, seksual, judi, nar
 
 ---
 
-## 5. Target Audience & Content  ⚠️ (PALING KRUSIAL untuk MathSharp)
+## 5. Target Audience & Content  ⚠️ (PALING KRUSIAL untuk MathBlow)
 - **Target age group:** centang **18 and over** SAJA + aktifkan **Restrict Minor Access**.
 - **Jangan** centang kelompok usia di bawah 18 → memicu **Families Policy** (kategori sensitif, review lambat).
 - **Appeal to children?** → **No.**
 
-> 🔴 **Risiko #1 MathSharp = reklasifikasi child-directed.** Game matematika rawan dianggap menarik bagi
+> 🔴 **Risiko #1 MathBlow = reklasifikasi child-directed.** Game matematika rawan dianggap menarik bagi
 > anak. Pertahankan estetika **dewasa-minimalis** (dark, font geometrik, tanpa mascot/kartun/warna pelangi)
 > agar Google **tidak menimpa** deklarasi 18+ → ini penentu kecepatan review.
 
@@ -64,7 +64,7 @@ Jawab semua kategori sensitif dengan **No** (tanpa kekerasan, seksual, judi, nar
 ---
 
 ## 7. Ringkasan "profil bersih"
-| Sinyal review | Status MathSharp |
+| Sinyal review | Status MathBlow |
 |---|---|
 | Izin sistem | **0** |
 | Data dikumpulkan/dibagikan | **None** |

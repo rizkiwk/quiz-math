@@ -9,18 +9,18 @@ plugins {
     alias(libs.plugins.ksp)
 }
 
-// Kredensial signing disimpan di luar repo: ~/keystores/mathsharp-keystore.properties
-val keystorePropsFile = file("${System.getProperty("user.home")}/keystores/mathsharp-keystore.properties")
+// Kredensial signing disimpan di luar repo: ~/keystores/mathblow-keystore.properties
+val keystorePropsFile = file("${System.getProperty("user.home")}/keystores/mathblow-keystore.properties")
 val keystoreProps = Properties().apply {
     if (keystorePropsFile.exists()) keystorePropsFile.inputStream().use { load(it) }
 }
 
 android {
-    namespace = "com.avos.mathsharp"
+    namespace = "id.quiz.mathblow"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.avos.mathsharp"
+        applicationId = "id.quiz.mathblow"
         minSdk = 26          // Android 8.0 — adaptive icon native (tanpa PNG fallback), jangkauan ~96%+
         targetSdk = 36       // headroom lewat tenggat ~Agustus 2026; verifikasi ulang di Play Console saat submit
         versionCode = 1

@@ -1,4 +1,4 @@
-# MathSharp — Mental Math Brain Training 🧠
+# MathBlow — Mental Math Brain Training 🧠
 
 Game latihan **mental math** untuk **dewasa (18+)**. Android, phone-only, **nol izin**, **offline penuh**, data tersimpan lokal di perangkat.
 
@@ -8,16 +8,17 @@ Game latihan **mental math** untuk **dewasa (18+)**. Android, phone-only, **nol 
 
 ## ✅ Status (terverifikasi)
 
-| Verifikasi | Hasil |
+| Verifikasi (20 Jul 2026, package `id.quiz.mathblow`) | Hasil |
 |---|---|
 | `:app:assembleDebug` | ✅ BUILD SUCCESSFUL |
-| `:app:testDebugUnitTest` | ✅ Lolos (mesin soal + scoring) |
-| `:app:bundleRelease` (R8 + lintVitalRelease) | ✅ **AAB 4.2 MB**, ter-sign (font brand + SFX + musik) |
+| `:app:testDebugUnitTest` | ✅ **8/8 lolos** (mesin soal + scoring) |
+| `:app:bundleRelease` (R8 + lintVitalRelease) | ✅ **AAB 5,2 MB**, ter-sign `MATHBLOW` + `jar verified` (font brand + SFX + musik) |
+| Identitas AAB | ✅ mapping R8: 4.465 baris `id.quiz.mathblow`, **0** baris package lama |
 | Izin sistem (debug & release) | ✅ **NOL** (hanya signature internal androidx — tak muncul di Play) |
-| Penyimpanan | ✅ Room (SQLite) + DataStore, lokal |
+| Penyimpanan | ✅ Room (SQLite) + DataStore, lokal (`mathblow.db`) |
 
-> ⚠️ **Keystore:** dev keystore sudah dibuat di `~/keystores/mathsharp-release.jks` (valid 30 thn, di luar repo).
-> Password ada di `~/keystores/mathsharp-keystore.properties`. **BACKUP file ini** — hilang = tak bisa update app
+> ⚠️ **Keystore:** dev keystore sudah dibuat di `~/keystores/mathblow-release.jks` (valid 30 thn, di luar repo).
+> Password ada di `~/keystores/mathblow-keystore.properties`. **BACKUP file ini** — hilang = tak bisa update app
 > (kecuali reset upload key via Play App Signing). Ganti password sebelum rilis produksi bila perlu.
 
 ---
@@ -31,8 +32,8 @@ minSdk 26 · target/compileSdk 36 · AGP 8.13.1 · Gradle 8.13.
 ## 📂 Struktur
 
 ```
-app/src/main/java/com/avos/mathsharp/
-├── MathSharpApp.kt · MainActivity.kt
+app/src/main/java/id/quiz/mathblow/
+├── MathBlowApp.kt · MainActivity.kt
 ├── di/AppContainer.kt              ← DI manual
 ├── domain/                         ← QuestionGenerator (prosedural + distractor), Scoring, Achievements
 │   └── model/                      ← Skill, Question, UserSettings

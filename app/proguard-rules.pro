@@ -1,7 +1,7 @@
-# ── MathSharp R8 / ProGuard rules ──────────────────────────────────────────
+# ── MathBlow R8 / ProGuard rules ───────────────────────────────────────────
 
 # Room: entitas & DAO diakses via refleksi oleh generated code
--keep class com.avos.mathsharp.data.local.** { *; }
+-keep class id.quiz.mathblow.data.local.** { *; }
 -keep class androidx.room.** { *; }
 -dontwarn androidx.room.paging.**
 
@@ -9,10 +9,10 @@
 -keepattributes *Annotation*, InnerClasses
 -dontnote kotlinx.serialization.**
 -keepclassmembers class **$$serializer { *; }
--keepclasseswithmembers class com.avos.mathsharp.ui.navigation.** {
+-keepclasseswithmembers class id.quiz.mathblow.ui.navigation.** {
     kotlinx.serialization.KSerializer serializer(...);
 }
--keep,includedescriptorclasses class com.avos.mathsharp.ui.navigation.**$$serializer { *; }
+-keep,includedescriptorclasses class id.quiz.mathblow.ui.navigation.**$$serializer { *; }
 
 # Kotlin metadata & coroutines
 -keep class kotlin.Metadata { *; }
