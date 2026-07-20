@@ -16,6 +16,6 @@
 *.keystore
 keystore.properties
 
-# Dokumen STRATEGI — JANGAN ke repo PUBLIK (mengungkap clean-room/JASUINDO)
-/docs/PROTOKOL_CLEAN_ROOM.md
+# Dokumen INTERNAL — JANGAN ke repo PUBLIK (strategi, data akun)
+/docs/
 *.docx
